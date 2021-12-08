@@ -1,0 +1,20 @@
+5. Question: The following code creates one array and one string object.
+How many references to those objects exist after the code executes?
+Is either object eligible for garbage collection?
+
+...
+String[] students = new String[10];
+String studentName = "Peter Parker";
+students[0] = studentName;
+studentName = null;
+...
+
+
+    Answer: There is one reference to the students array and that array has one reference to the string Peter Smith.
+Neither object is eligible for garbage collection.
+
+6. Question: How does a program destroy an object that it creates?
+
+   Answer: A program does not explicitly destroy objects.
+   A program can set all references to an object to null so that it becomes eligible for garbage collection.
+   But the program does not actually destroy objects.
