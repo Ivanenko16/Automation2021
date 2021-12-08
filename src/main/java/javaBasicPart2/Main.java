@@ -8,7 +8,7 @@ public class Main extends NumberHolder{
         String str1 = "PHP Exercises and ";
         String str2 = "Python Exercises";
 
-        String str3 = str1.concat(str2).replace("P", "").replace("p","");
+        String str3 = str1.concat(str2).replace("P", "");
         System.out.println(str3);
 
 //  4. Given the following class, called NumberHolder, write some code that creates an instance of the class,
