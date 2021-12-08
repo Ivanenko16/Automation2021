@@ -12,4 +12,7 @@ public class Computer {
         this.screenSize = screenSize;
     }
 
+    Computer computer1 = new Computer("Apple","1920*1080");
+    Computer computer2 = new Computer("Xiaomi","1680*1050");
+
 }
