@@ -16,6 +16,12 @@ public class Main extends NumberHolder {
         Computer computer1 = new Computer("Apple", "1920*1080");
         Computer computer2 = new Computer("Xiaomi", "1680*1050");
 
+//  3. What's wrong with the following program? Fix the program called SomethingIsWrong.
+        Rectangle myRect = new Rectangle();
+        myRect.weight = 40;
+        myRect.height = 50;
+        System.out.println("myRect's area is " + myRect.area());
+
 //  4. Given the following class, called NumberHolder, write some code that creates an instance of the class,
 //  initializes its two member variables, and then displays the value of each member variable.
         NumberHolder numberHolder = new NumberHolder();
