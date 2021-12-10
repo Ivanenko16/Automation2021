@@ -11,5 +11,4 @@ public class Computer {
         this.brand = brand;
         this.screenSize = screenSize;
     }
-
 }

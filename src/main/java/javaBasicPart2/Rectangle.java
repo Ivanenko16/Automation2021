@@ -5,7 +5,7 @@ public class Rectangle {
     int height;
     int weight;
 
-    public int area(){
+    public int area() {
         return weight * height;
     }
 }
