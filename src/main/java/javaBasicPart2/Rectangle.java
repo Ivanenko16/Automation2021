@@ -10,7 +10,7 @@ public class Rectangle {
         this.weight = weight;
     }
 
-    public int area() {
+    public int getArea() {
         return weight * height;
     }
 }

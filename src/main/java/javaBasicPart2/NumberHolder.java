@@ -14,7 +14,7 @@ public class NumberHolder {
         return anInt;
     }
 
-    public float getaFloat() {
+    public float getAFloat() {
         return aFloat;
     }
 }
