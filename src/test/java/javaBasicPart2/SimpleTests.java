@@ -8,9 +8,7 @@ public class SimpleTests {
 
     @Test
     public void checkRectangleArea() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.weight = 40;
-        rectangle.height = 50;
+        Rectangle rectangle = new Rectangle(50,40);
         Assertions.assertEquals(2000, rectangle.area());
     }
 
