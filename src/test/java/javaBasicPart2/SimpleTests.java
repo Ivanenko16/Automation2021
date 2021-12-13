@@ -9,7 +9,7 @@ public class SimpleTests {
     @Test
     public void checkRectangleArea() {
         Rectangle rectangle = new Rectangle(50,40);
-        Assertions.assertEquals(2000, rectangle.area());
+        Assertions.assertEquals(2000, rectangle.getArea());
     }
 
 }
