@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Random;
 
 public class Vector {
-    private int x, y, z;
-    private static final int lengthCreatedList = 20;
+    private int x;
+    private int y;
+    private int z;
+    private static final int LENGTH_CREATED_LIST = 20;
 
     public Vector() {
     }
@@ -42,16 +44,14 @@ public class Vector {
     }
 
     public double lengthVector() {
-        return Math.sqrt(getX() * getX() + getY() * getY() + getZ() * getZ());
+        return Math.sqrt(x * x + y * y + z * z);
     }
 
     public static double scalarMultiplication() {
-        Random random = new Random();
-        int randomVector1 = random.nextInt(lengthCreatedList);
-        Vector vector1 = ListRandomVector().get(randomVector1);
+        List<Vector> list = listRandomVector();
+        Vector vector1 = list.get(1);
         showArgumentsRandomVectors(vector1, "vector1");
-        int randomVector2 = random.nextInt(lengthCreatedList);
-        Vector vector2 = ListRandomVector().get(randomVector2);
+        Vector vector2 = list.get(2);
         showArgumentsRandomVectors(vector2, "vector2");
         return scalarMultiplication(vector1, vector2);
     }
@@ -63,9 +63,9 @@ public class Vector {
         return a + b + c;
     }
 
-    private static List<Vector> ListRandomVector() {
+    private static List<Vector> listRandomVector() {
         List<Vector> vectorList = new ArrayList<>();
-        for (int i = 0; i < lengthCreatedList; i++) {
+        for (int i = 0; i < LENGTH_CREATED_LIST; i++) {
             vectorList.add(createRandomVector());
         }
         return vectorList;
