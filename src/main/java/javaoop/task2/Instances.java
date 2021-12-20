@@ -11,11 +11,9 @@ public class Instances {
 
         shape = new Oval(3, 6);
         shape.getSquare();
-        shape = new Rectangle(2, 5);
+        shape = new Rectangle(2, 7);
         shape.getSquare();
         shape = new Square(3);
         shape.getSquare();
-
-
     }
 }
