@@ -1,6 +1,6 @@
-package javaOOP;
+package javaoop;
 
-import javaOOP.task1.Vector;
+import javaoop.task1.Vector;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

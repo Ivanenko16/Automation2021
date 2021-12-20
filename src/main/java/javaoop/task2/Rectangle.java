@@ -1,4 +1,4 @@
-package javaOOP.task2;
+package javaoop.task2;
 
 public class Rectangle extends Rectangular {
     private final int a;

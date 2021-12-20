@@ -1,4 +1,4 @@
-package javaOOP.task1;
+package javaoop.task1;
 
 public class Run {
 

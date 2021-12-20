@@ -1,4 +1,4 @@
-package javaOOP.task2;
+package javaoop.task2;
 
 public abstract class Round implements Shape {
 
