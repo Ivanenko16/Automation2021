@@ -10,9 +10,6 @@ public class Vector {
     private int z;
     private static final int LENGTH_CREATED_LIST = 20;
 
-    public Vector() {
-    }
-
     public Vector(int x, int y, int z) {
         this.x = x;
         this.y = y;
@@ -73,11 +70,7 @@ public class Vector {
 
     private static Vector createRandomVector() {
         Random random = new Random();
-        Vector vector = new Vector(random.nextInt(30), random.nextInt(30), random.nextInt(30));
-        Vector vector1 = new Vector();
-        Vector[] vectors = new Vector[]{vector, vector1};
-        int n = (int) Math.floor(Math.random() * vectors.length);
-        return vectors[n];
+        return new Vector(random.nextInt(30), random.nextInt(30), random.nextInt(30));
     }
 
     private static void showArgumentsRandomVectors(Vector vector, String vectorName) {
