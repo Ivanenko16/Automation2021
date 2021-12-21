@@ -1,4 +1,4 @@
-package javaBasicPart2;
+package javabasicpart2;
 
 public class Main extends NumberHolder {
     public static void main(String[] args) {

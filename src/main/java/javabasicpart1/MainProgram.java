@@ -1,4 +1,4 @@
-package javaBasicPart1;
+package javabasicpart1;
 
 public class MainProgram extends SeparateMethods {
     public static void main(String[] args) {
