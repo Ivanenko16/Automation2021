@@ -1,4 +1,4 @@
-package guessingGame;
+package guessinggame;
 
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;

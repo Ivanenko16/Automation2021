@@ -1,4 +1,4 @@
-package guessingGame;
+package guessinggame;
 
 public class Run {
     public static void main(String[] args) {
