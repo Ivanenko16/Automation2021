@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class CharacterCount {
 
-    static void characterCount(String inputString) {
+    static Map<Character, Integer> characterCount(String inputString) {
         Map<Character, Integer> charCountMap = new HashMap<>();
 
         char[] strArray = inputString.toLowerCase().replaceAll("\\s", "").
@@ -18,6 +18,6 @@ public class CharacterCount {
                 charCountMap.put(c, 1);
             }
         }
-        charCountMap.forEach((key, value) -> System.out.println(key + " " + value));
+        return charCountMap;
     }
 }

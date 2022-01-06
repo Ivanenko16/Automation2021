@@ -15,6 +15,6 @@ public class Run {
         fileInputStream.read(data);
         String text = new String(data);
 
-        characterCount(text);
+        characterCount(text).forEach((key, value) -> System.out.println(key + " " + value));
     }
 }

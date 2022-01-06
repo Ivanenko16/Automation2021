@@ -59,11 +59,7 @@ public class Run {
         Iterator<V> valueIterator = values.iterator();
 
         while (keyIterator.hasNext()) {
-            if (valueIterator.hasNext()) {
-                map.put(keyIterator.next(), valueIterator.next());
-            } else {
-                map.put(keyIterator.next(), null);
-            }
+            map.put(keyIterator.next(), valueIterator.next());
         }
         return map;
     }

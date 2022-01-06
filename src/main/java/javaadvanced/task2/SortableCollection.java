@@ -6,9 +6,9 @@ import java.util.TreeSet;
 
 public class SortableCollection {
 
-    static <V> void createSortableCollection(Collection<V> collection) {
-        Set<V> set = new TreeSet<>(collection);
-        for (V o : set) {
+    static <T> void createSortableCollection(Collection<T> collection) {
+        Set<T> set = new TreeSet<>(collection);
+        for (T o : set) {
             System.out.println(o.toString());
         }
     }

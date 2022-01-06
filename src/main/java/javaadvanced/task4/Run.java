@@ -16,9 +16,7 @@ public class Run {
 
         System.out.println("List of HashSet:");
         HashSet<String> orderHashSet = new HashSet<>(Arrays.asList(orders));
-        for (String str : orderHashSet) {
-            System.out.println(str);
-        }
+        System.out.println(orderHashSet);
 
         System.out.println("List of TreeSet:");
         TreeSet<String> orderTreeSet = new TreeSet<>(Arrays.asList(orders));
