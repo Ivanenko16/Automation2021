@@ -20,8 +20,6 @@ public class Run {
 
         System.out.println("List of TreeSet:");
         TreeSet<String> orderTreeSet = new TreeSet<>(Arrays.asList(orders));
-        for (String str : orderTreeSet) {
-            System.out.println(str);
-        }
+        System.out.println(orderTreeSet);
     }
 }

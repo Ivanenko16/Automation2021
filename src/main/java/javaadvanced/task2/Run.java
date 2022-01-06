@@ -21,7 +21,7 @@ public class Run extends SortableCollection {
         list1.add(2);
         list1.add(3);
 
-        createSortableCollection(list);
-        createSortableCollection(list1);
+        System.out.println(createSortableCollection(list));
+        System.out.println(createSortableCollection(list1));
     }
 }
