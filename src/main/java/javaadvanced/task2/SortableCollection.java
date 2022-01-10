@@ -5,7 +5,7 @@ import java.util.TreeSet;
 
 public class SortableCollection {
 
-    static <T> Collection createSortableCollection(Collection<T> collection) {
+    public static <T> Collection<T> createSortableCollection(Collection<T> collection) {
         return new TreeSet<>(collection);
     }
 }
