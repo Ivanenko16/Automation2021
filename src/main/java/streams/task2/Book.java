@@ -84,6 +84,7 @@ public class Book {
     public static List<Book> createSortedListOfBooks(List<Book> listOfBooks) {
         return listOfBooks.stream()
                 .sorted(Comparator.comparing(Book::getName)
+                        .reversed()
                         .thenComparing(Book::getPrice))
                 .collect(Collectors.toList());
     }

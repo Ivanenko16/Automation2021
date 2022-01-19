@@ -39,15 +39,10 @@ public class Person {
         this.age = age;
     }
 
-    public static List<Person> createListOfDistinctAdultPerson(List<Person> personList) {
+    public static List<String> createListOfUniqueNamesForAdults(List<Person> personList) {
         return personList.stream()
                 .filter(person -> person != null && person.getAge() >= 18)
                 .filter(UtilityFunction.distinctByKey(Person::getFirstName))
-                .collect(Collectors.toList());
-    }
-
-    public static List<String> createListOfUniqueName(List<Person> personList) {
-        return personList.stream()
                 .map(Person::getFirstName)
                 .map(String::toUpperCase)
                 .map(String::trim)

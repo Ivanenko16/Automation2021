@@ -19,6 +19,6 @@ public class Run {
         personList.add(null);
         personList.add(new Person("Aaron", "Bernice", 18));
 
-        System.out.println(Person.createListOfUniqueName(Person.createListOfDistinctAdultPerson(personList)));
+        System.out.println(Person.createListOfUniqueNamesForAdults(personList));
     }
 }
