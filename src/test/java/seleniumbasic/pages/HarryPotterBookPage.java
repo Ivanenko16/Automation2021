@@ -5,16 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class BookPageCost73 {
+public class HarryPotterBookPage {
 
-    public BookPageCost73(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+    public HarryPotterBookPage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//h1")
     WebElement bookTitle;
 
-    public String getBookTitle(){
-       return bookTitle.getText();
+    public String getBookTitle() {
+        return bookTitle.getText();
     }
 }

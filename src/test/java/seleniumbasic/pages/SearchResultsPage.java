@@ -19,11 +19,11 @@ public class SearchResultsPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[@data-price='73.0']")
-    private WebElement addToBasketButtonForBookCost73;
+    @FindBy(xpath = "//*[@data-isbn='9781408845660']")
+    private WebElement addToBasketHarryPotterAndThePrisonerOfAzkaban;
 
     @FindBy(xpath = "//*[@alt='Harry Potter and the Prisoner of Azkaban']/..")
-    private WebElement linkForPageBookCost73;
+    private WebElement linkForHarryPotterPageBook;
 
     @FindBy(xpath = " descendant-or-self::*[contains(@content,'Harry Potter')]")
     private List<WebElement> generalSearchResult;
@@ -34,21 +34,23 @@ public class SearchResultsPage {
     @FindBy(xpath = "//div[@class='modal-header']//h3")
     private WebElement modalTitle;
 
+    @FindBy(xpath = "//a[text()='Basket / Checkout']")
+    private WebElement basketCheckoutButton;
+
     public int countGeneralSearchResult() {
         return generalSearchResult.size();
     }
 
-    public BookPageCost73 navigateToBookPage() {
+    public HarryPotterBookPage navigateToHarryPotterBookPage() {
         new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.elementToBeClickable(linkForPageBookCost73));
-        linkForPageBookCost73.click();
-        return new BookPageCost73(driver);
+                .until(ExpectedConditions.elementToBeClickable(linkForHarryPotterPageBook));
+        linkForHarryPotterPageBook.click();
+        return new HarryPotterBookPage(driver);
     }
 
-    public SearchResultsPage addBookCost73ToBasket() {
-        new BookDepositoryHomePage(driver).openPage()
-                .searchForTerms("Harry Potter")
-                .addToBasketButtonForBookCost73.click();
+    public SearchResultsPage addHarryPotterBookToBasket() {
+        new SearchResultsPage(driver)
+                .addToBasketHarryPotterAndThePrisonerOfAzkaban.click();
         return this;
     }
 
@@ -56,5 +58,12 @@ public class SearchResultsPage {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOf(modalTitle));
         return modalTitle.getText();
+    }
+
+    public YourBasketPage navigateToYourBasketPage() {
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOf(basketCheckoutButton));
+        basketCheckoutButton.click();
+        return new YourBasketPage(driver);
     }
 }
