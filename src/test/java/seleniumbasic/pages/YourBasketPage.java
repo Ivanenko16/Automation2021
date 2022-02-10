@@ -17,7 +17,7 @@ public class YourBasketPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//dd[text()='53,72 €']")
+    @FindBy(xpath = "//dl[@class='total']//dd")
     WebElement total;
 
     @FindBy(xpath = "//a[@class='checkout-btn btn optimizely-variation-1 original-bucket']")
