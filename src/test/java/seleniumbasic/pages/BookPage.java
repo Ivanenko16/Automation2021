@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HarryPotterBookPage {
+public class BookPage {
 
-    public HarryPotterBookPage(WebDriver driver) {
+    public BookPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 

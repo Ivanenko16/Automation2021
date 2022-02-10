@@ -26,7 +26,7 @@ public class YourBasketPageTest {
         String total = new BookDepositoryHomePage(driver)
                 .openPage()
                 .searchForTerms("Harry Potter")
-                .addHarryPotterBookToBasket()
+                .addBookToBasket()
                 .navigateToYourBasketPage()
                 .getTotal();
 

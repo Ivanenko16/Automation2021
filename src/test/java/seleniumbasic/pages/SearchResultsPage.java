@@ -41,14 +41,14 @@ public class SearchResultsPage {
         return generalSearchResult.size();
     }
 
-    public HarryPotterBookPage navigateToHarryPotterBookPage() {
+    public BookPage navigateToBookPage() {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(linkForHarryPotterPageBook));
         linkForHarryPotterPageBook.click();
-        return new HarryPotterBookPage(driver);
+        return new BookPage(driver);
     }
 
-    public SearchResultsPage addHarryPotterBookToBasket() {
+    public SearchResultsPage addBookToBasket() {
         new SearchResultsPage(driver)
                 .addToBasketHarryPotterAndThePrisonerOfAzkaban.click();
         return this;

@@ -31,7 +31,7 @@ public class PaymentDetailsPageTest {
         return new BookDepositoryHomePage(driver)
                 .openPage()
                 .searchForTerms("Harry Potter")
-                .addHarryPotterBookToBasket()
+                .addBookToBasket()
                 .navigateToYourBasketPage()
                 .navigateToPaymentDetailsPage();
     }

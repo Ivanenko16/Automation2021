@@ -26,7 +26,7 @@ public class SearchResultsPageTest {
         String bookTitle = new BookDepositoryHomePage(driver)
                 .openPage()
                 .searchForTerms("Harry Potter")
-                .navigateToHarryPotterBookPage()
+                .navigateToBookPage()
                 .getBookTitle();
 
         Assert.assertEquals("Harry Potter and the Prisoner of Azkaban", bookTitle);
@@ -38,7 +38,7 @@ public class SearchResultsPageTest {
         String modalTitle = new BookDepositoryHomePage(driver)
                 .openPage()
                 .searchForTerms("Harry Potter")
-                .addHarryPotterBookToBasket()
+                .addBookToBasket()
                 .getModalTitle();
 
         Assert.assertEquals("Item added to your basket", modalTitle);
