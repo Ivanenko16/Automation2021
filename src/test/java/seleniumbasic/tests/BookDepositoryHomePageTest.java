@@ -15,6 +15,7 @@ public class BookDepositoryHomePageTest {
 
     @Before
     public void browserSetup() {
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
