@@ -2,6 +2,7 @@ package seleniumbasic.tests;
 
 import org.assertj.core.api.SoftAssertions;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
@@ -14,8 +15,8 @@ import seleniumbasic.pages.YourBasketPage;
 public class TestRun {
 
     private WebDriver driver;
-    private static final String TOTAL = "52,99 €";
-    private static final String SUB_TOTAL = "52,99 €";
+    private static final String TOTAL = "53,45 €";
+    private static final String SUB_TOTAL = "53,45 €";
     private static final String VAT = "0,00 €";
     private static final String BOOK_NAME = "Harry Potter";
     private static final String EMAIL = "test@user.com";
@@ -36,18 +37,17 @@ public class TestRun {
                 .addBookToBasket()
                 .navigateToYourBasketPage();
 
-        SoftAssertions assertionsYourBasketPage = new SoftAssertions();
-        assertionsYourBasketPage.assertThat(yourBasketPage.getTotal()).isEqualTo(TOTAL);
+        Assert.assertEquals(TOTAL, yourBasketPage.getTotal());
 
         PaymentDetailsPage paymentDetailsPage = yourBasketPage.navigateToPaymentDetailsPage();
         paymentDetailsPage.fillEmailField(EMAIL);
 
         SoftAssertions assertionsPaymentDetailsPage = new SoftAssertions();
 
-        assertionsPaymentDetailsPage.assertThat(paymentDetailsPage.getDataFromEmailField()).isEqualTo(EMAIL);
-        assertionsPaymentDetailsPage.assertThat(paymentDetailsPage.getTotal()).isEqualTo(TOTAL);
-        assertionsPaymentDetailsPage.assertThat(paymentDetailsPage.getSubTotal()).isEqualTo(SUB_TOTAL);
-        assertionsPaymentDetailsPage.assertThat(paymentDetailsPage.getVat()).isEqualTo(VAT);
+        assertionsPaymentDetailsPage.assertThat(paymentDetailsPage.getDataFromEmailField()).as("Email is incorrect").isEqualTo(EMAIL);
+        assertionsPaymentDetailsPage.assertThat(paymentDetailsPage.getTotal()).as("Total is incorrect").isEqualTo(TOTAL);
+        assertionsPaymentDetailsPage.assertThat(paymentDetailsPage.getSubTotal()).as("SubTotal is incorrect").isEqualTo(SUB_TOTAL);
+        assertionsPaymentDetailsPage.assertThat(paymentDetailsPage.getVat()).as("Vat is incorrect").isEqualTo(VAT);
 
         assertionsPaymentDetailsPage.assertAll();
     }
